@@ -133,50 +133,61 @@ public class MainActivity extends AppCompatActivity {
         add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute();
-                ACTION = ADDITION;
-                result.setText(String.valueOf(val1) + "+");
-                info.setText(null);
+                if (info.getText().length() > 0) {
+                    compute();
+                    ACTION = ADDITION;
+                    result.setText(String.valueOf(val1) + "+");
+                    info.setText(null);
+                }
+
             }
         });
 
         sub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute();
-                ACTION = ADDITION;
-                result.setText(String.valueOf(val1) + "-");
-                info.setText(null);
+                if (info.getText().length() > 0) {
+                    compute();
+                    ACTION = SUBTRACTION;
+                    result.setText(String.valueOf(val1) + "-");
+                    info.setText(null);
+                }
             }
         });
 
         mul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute();
-                ACTION = ADDITION;
-                result.setText(String.valueOf(val1) + "*");
-                info.setText(null);
+                if (info.getText().length() > 0) {
+                    compute();
+                    ACTION = MULTIPLICATION;
+                    result.setText(String.valueOf(val1) + "*");
+                    info.setText(null);
+                }
             }
         });
 
         div.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute();
-                ACTION = ADDITION;
-                result.setText(String.valueOf(val1) + "/");
-                info.setText(null);
+                if (info.getText().length() > 0) {
+                    compute();
+                    ACTION = DIVSION;
+                    result.setText(String.valueOf(val1) + "/");
+                    info.setText(null);
+                }
             }
         });
 
         equal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                compute();
-                ACTION = EQU;
-                result.setText(result.getText().toString() + String.valueOf(val2) + "=" + String.valueOf(val1));
-                info.setText(null);
+                if (info.getText().length() > 0) {
+                    compute();
+                    ACTION = EQU;
+                    result.setText(result.getText().toString() + String.valueOf(val2) + "=" + String.valueOf(val1));
+                    info.setText(null);
+                }
             }
         });
 
